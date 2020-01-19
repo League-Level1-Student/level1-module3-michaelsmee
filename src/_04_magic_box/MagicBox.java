@@ -1,3 +1,4 @@
+
 package _04_magic_box;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
@@ -14,6 +15,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -35,7 +37,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	 */
 
 	BufferedImage backgroundImage;
-
+	MediaPalace poop= new MediaPalace();
 
 	@Override
 	public void run() {
@@ -51,6 +53,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 		JFrame frame = new JFrame("The Magic Box contains many secrets...");
 		frame.add(this);
 		setPreferredSize(new Dimension(backgroundImage.getWidth(), backgroundImage.getHeight()));
+		frame.addMouseListener(this);
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
@@ -73,7 +76,11 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
+		poop.speak("tyler");
+		if(e.getSource() == this) {
 		
+		
+		}
 	}
 
 	@Override
