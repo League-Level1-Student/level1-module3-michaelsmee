@@ -76,10 +76,24 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		poop.speak("tyler");
-		if(e.getSource() == this) {
+	System.out.println("x is"+e.getX());
+	System.out.println("y is"+e.getY());
+		if(e.getY()>100 && e.getY()<200 && e.getX()>100 && e.getX()<200) {
+			poop.speak("tyler");
 		
-		
+		}
+		else if(e.getY()>500 && e.getY()<550 && e.getX()>160 && e.getX()<220) {
+		poop.speak("Hi, my name is Tyler Wiltz, I come from a massive house called the apartment complex");	
+	}
+	
+		else if(e.getY()>850 && e.getY()<900 && e.getX()>180 && e.getX()<200) {
+			poop.speak("I am someone who knows Tyler, he is a very big memer with an old ford not to mention his love of shoes, 30 pairs, isn't that a lot. I know, it is, as a hint, try clicking some other areas");
+		}
+		else if(e.getY()>350 && e.getY()<600 && e.getX()>450 && e.getX()<600 ){
+			poop.speak("this is tyler's dorm area, fyi, the architecture sucks, it can't even hold his big old chevy truck or shoes, just an old laptop");
+		}
+		else if(e.getY()>250 && e.getY()<400 && e.getX()>240 && e.getX()<500	) {
+		poop.speak("this is lord Wiltz's water source of infinite chipotle water");	
 		}
 	}
 
