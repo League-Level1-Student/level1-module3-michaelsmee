@@ -15,9 +15,7 @@ public class CowTimer {
 	this.minutes=minutes;
 	}
 	/* 4. Complete the main method of the CowTimerRunner class */
-public static void main(String[] args) {
-	
-}
+
 	
 
 	public void setTime(int minutes) {
@@ -30,7 +28,12 @@ public static void main(String[] args) {
 		 * 2. Count down the minutes, print the current minute then sleep for the number of minutes
 		 * using Thread.sleep(int milliseconds). 
 		 */
-
+		for (int i = minutes; i >= 0; i--) {
+			System.out.println(i);
+			Thread.sleep(1000);	
+		}
+		playSound("moo.wav");
+		
 		/*
 		 * 3. When the timer is finished, use the playSound method to play a moo sound.
 		 * You can use the .wav file in the default package, or you can download one
